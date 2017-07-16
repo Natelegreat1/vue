@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10AB24245F483D9D104C2BAB /* Pods_vue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A749BA73D8664C3124A242D1 /* Pods_vue.framework */; };
+		F1D62C1D1F17DDA200D84888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D62C1C1F17DDA200D84888 /* AppDelegate.swift */; };
+		F1D62C221F17DDA200D84888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D62C201F17DDA200D84888 /* Main.storyboard */; };
+		F1D62C241F17DDA200D84888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D62C231F17DDA200D84888 /* Assets.xcassets */; };
+		F1D62C271F17DDA200D84888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D62C251F17DDA200D84888 /* LaunchScreen.storyboard */; };
+		F1D62C2F1F17ECDA00D84888 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D62C2E1F17ECDA00D84888 /* CameraViewController.swift */; };
+		F1D62C311F180A3800D84888 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D62C301F180A3800D84888 /* Search.storyboard */; };
+		F1D62C331F180A4D00D84888 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D62C321F180A4D00D84888 /* SearchViewController.swift */; };
+		F1D62C351F180B6A00D84888 /* Compare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D62C341F180B6A00D84888 /* Compare.storyboard */; };
+		F1F10BA71F19D69D0040972B /* UI+Vue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BA61F19D69D0040972B /* UI+Vue.swift */; };
+		F1F10BA91F19D7FF0040972B /* ScannedProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F10BA81F19D7FF0040972B /* ScannedProduct.storyboard */; };
+		F1F10BAB1F19D8620040972B /* ScannedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BAA1F19D8620040972B /* ScannedProductViewController.swift */; };
+		F1F10BAD1F19DBDD0040972B /* NBUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BAC1F19DBDD0040972B /* NBUI.swift */; };
+		F1F10BB01F19E36E0040972B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BAE1F19E36E0040972B /* ProductTableViewCell.swift */; };
+		F1F10BB11F19E36E0040972B /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1F10BAF1F19E36E0040972B /* ProductTableViewCell.xib */; };
+		F1F10BB31F1AB0CD0040972B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BB21F1AB0CD0040972B /* Product.swift */; };
+		F1F10BB51F1AB1160040972B /* ProductReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BB41F1AB1160040972B /* ProductReview.swift */; };
+		F1F10BB71F1AB43C0040972B /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BB61F1AB43C0040972B /* ProductManager.swift */; };
+		F1F10BBF1F1AC0DC0040972B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BBE1F1AC0DC0040972B /* ProductViewController.swift */; };
+		F1F10BC11F1AC0F40040972B /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F10BC01F1AC0F40040972B /* Product.storyboard */; };
+		F1F10BC41F1AC35C0040972B /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BC21F1AC35C0040972B /* ReviewTableViewCell.swift */; };
+		F1F10BC51F1AC35C0040972B /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1F10BC31F1AC35C0040972B /* ReviewTableViewCell.xib */; };
+		F1F10BC71F1BDC6D0040972B /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BC61F1BDC6D0040972B /* BasketViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25E274E6E964FB27AC5C8CB6 /* Pods-vue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vue/Pods-vue.debug.xcconfig"; sourceTree = "<group>"; };
+		94DF904CAB4DA958E6B78B90 /* Pods-vue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vue.release.xcconfig"; path = "Pods/Target Support Files/Pods-vue/Pods-vue.release.xcconfig"; sourceTree = "<group>"; };
+		A749BA73D8664C3124A242D1 /* Pods_vue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D62C191F17DDA200D84888 /* vue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D62C1C1F17DDA200D84888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1D62C211F17DDA200D84888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1D62C231F17DDA200D84888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1D62C261F17DDA200D84888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1D62C281F17DDA200D84888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1D62C2E1F17ECDA00D84888 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		F1D62C301F180A3800D84888 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		F1D62C321F180A4D00D84888 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F1D62C341F180B6A00D84888 /* Compare.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compare.storyboard; sourceTree = "<group>"; };
+		F1F10BA61F19D69D0040972B /* UI+Vue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Vue.swift"; sourceTree = "<group>"; };
+		F1F10BA81F19D7FF0040972B /* ScannedProduct.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScannedProduct.storyboard; sourceTree = "<group>"; };
+		F1F10BAA1F19D8620040972B /* ScannedProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedProductViewController.swift; sourceTree = "<group>"; };
+		F1F10BAC1F19DBDD0040972B /* NBUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NBUI.swift; path = "../../<Helpers>/NBSuite/Pod/Classes/Swift/NBUI.swift"; sourceTree = "<group>"; };
+		F1F10BAE1F19E36E0040972B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		F1F10BAF1F19E36E0040972B /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		F1F10BB21F1AB0CD0040972B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		F1F10BB41F1AB1160040972B /* ProductReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductReview.swift; sourceTree = "<group>"; };
+		F1F10BB61F1AB43C0040972B /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		F1F10BBE1F1AC0DC0040972B /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		F1F10BC01F1AC0F40040972B /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		F1F10BC21F1AC35C0040972B /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		F1F10BC31F1AC35C0040972B /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		F1F10BC61F1BDC6D0040972B /* BasketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1D62C161F17DDA200D84888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10AB24245F483D9D104C2BAB /* Pods_vue.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5050C259094196BD3D3F681E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25E274E6E964FB27AC5C8CB6 /* Pods-vue.debug.xcconfig */,
+				94DF904CAB4DA958E6B78B90 /* Pods-vue.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFD371A2F01AC9962F318126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A749BA73D8664C3124A242D1 /* Pods_vue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1D62C101F17DDA100D84888 = {
+			isa = PBXGroup;
+			children = (
+				F1D62C1B1F17DDA200D84888 /* vue */,
+				F1D62C1A1F17DDA200D84888 /* Products */,
+				5050C259094196BD3D3F681E /* Pods */,
+				BFD371A2F01AC9962F318126 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F1D62C1A1F17DDA200D84888 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1D62C191F17DDA200D84888 /* vue.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1D62C1B1F17DDA200D84888 /* vue */ = {
+			isa = PBXGroup;
+			children = (
+				F1D62C1C1F17DDA200D84888 /* AppDelegate.swift */,
+				F1F10BBC1F1AC0970040972B /* Managers */,
+				F1F10BBB1F1AC0910040972B /* Models */,
+				F1F10BB81F1AC0750040972B /* Views */,
+				F1F10BB91F1AC07C0040972B /* Resources */,
+				F1F10BBA1F1AC0890040972B /* ViewControllers */,
+			);
+			path = vue;
+			sourceTree = "<group>";
+		};
+		F1F10BB81F1AC0750040972B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1F10BC01F1AC0F40040972B /* Product.storyboard */,
+				F1F10BBD1F1AC0A30040972B /* Cells */,
+				F1F10BA81F19D7FF0040972B /* ScannedProduct.storyboard */,
+				F1D62C201F17DDA200D84888 /* Main.storyboard */,
+				F1D62C251F17DDA200D84888 /* LaunchScreen.storyboard */,
+				F1D62C301F180A3800D84888 /* Search.storyboard */,
+				F1D62C341F180B6A00D84888 /* Compare.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F1F10BB91F1AC07C0040972B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1F10BA61F19D69D0040972B /* UI+Vue.swift */,
+				F1D62C231F17DDA200D84888 /* Assets.xcassets */,
+				F1F10BAC1F19DBDD0040972B /* NBUI.swift */,
+				F1D62C281F17DDA200D84888 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F1F10BBA1F1AC0890040972B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1F10BC61F1BDC6D0040972B /* BasketViewController.swift */,
+				F1F10BBE1F1AC0DC0040972B /* ProductViewController.swift */,
+				F1F10BAA1F19D8620040972B /* ScannedProductViewController.swift */,
+				F1D62C2E1F17ECDA00D84888 /* CameraViewController.swift */,
+				F1D62C321F180A4D00D84888 /* SearchViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F1F10BBB1F1AC0910040972B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1F10BB21F1AB0CD0040972B /* Product.swift */,
+				F1F10BB41F1AB1160040972B /* ProductReview.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F1F10BBC1F1AC0970040972B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F1F10BB61F1AB43C0040972B /* ProductManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		F1F10BBD1F1AC0A30040972B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F1F10BC21F1AC35C0040972B /* ReviewTableViewCell.swift */,
+				F1F10BC31F1AC35C0040972B /* ReviewTableViewCell.xib */,
+				F1F10BAE1F19E36E0040972B /* ProductTableViewCell.swift */,
+				F1F10BAF1F19E36E0040972B /* ProductTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1D62C181F17DDA200D84888 /* vue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1D62C2B1F17DDA200D84888 /* Build configuration list for PBXNativeTarget "vue" */;
+			buildPhases = (
+				41240CE49D929082BC89DD62 /* [CP] Check Pods Manifest.lock */,
+				F1D62C151F17DDA200D84888 /* Sources */,
+				F1D62C161F17DDA200D84888 /* Frameworks */,
+				F1D62C171F17DDA200D84888 /* Resources */,
+				20FC1059790C87F26A740B5C /* [CP] Embed Pods Frameworks */,
+				0CFF020D5E0EC53A8C2DB1B9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vue;
+			productName = vue;
+			productReference = F1D62C191F17DDA200D84888 /* vue.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1D62C111F17DDA100D84888 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Nathaniel Blumer";
+				TargetAttributes = {
+					F1D62C181F17DDA200D84888 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2L4CBUJMDB;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F1D62C141F17DDA100D84888 /* Build configuration list for PBXProject "vue" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1D62C101F17DDA100D84888;
+			productRefGroup = F1D62C1A1F17DDA200D84888 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1D62C181F17DDA200D84888 /* vue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1D62C171F17DDA200D84888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F10BC51F1AC35C0040972B /* ReviewTableViewCell.xib in Resources */,
+				F1D62C271F17DDA200D84888 /* LaunchScreen.storyboard in Resources */,
+				F1F10BA91F19D7FF0040972B /* ScannedProduct.storyboard in Resources */,
+				F1F10BC11F1AC0F40040972B /* Product.storyboard in Resources */,
+				F1D62C241F17DDA200D84888 /* Assets.xcassets in Resources */,
+				F1F10BB11F19E36E0040972B /* ProductTableViewCell.xib in Resources */,
+				F1D62C311F180A3800D84888 /* Search.storyboard in Resources */,
+				F1D62C221F17DDA200D84888 /* Main.storyboard in Resources */,
+				F1D62C351F180B6A00D84888 /* Compare.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CFF020D5E0EC53A8C2DB1B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vue/Pods-vue-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20FC1059790C87F26A740B5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vue/Pods-vue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41240CE49D929082BC89DD62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1D62C151F17DDA200D84888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F10BA71F19D69D0040972B /* UI+Vue.swift in Sources */,
+				F1F10BC41F1AC35C0040972B /* ReviewTableViewCell.swift in Sources */,
+				F1F10BC71F1BDC6D0040972B /* BasketViewController.swift in Sources */,
+				F1F10BB71F1AB43C0040972B /* ProductManager.swift in Sources */,
+				F1F10BB31F1AB0CD0040972B /* Product.swift in Sources */,
+				F1F10BBF1F1AC0DC0040972B /* ProductViewController.swift in Sources */,
+				F1D62C331F180A4D00D84888 /* SearchViewController.swift in Sources */,
+				F1F10BB51F1AB1160040972B /* ProductReview.swift in Sources */,
+				F1F10BB01F19E36E0040972B /* ProductTableViewCell.swift in Sources */,
+				F1F10BAB1F19D8620040972B /* ScannedProductViewController.swift in Sources */,
+				F1D62C1D1F17DDA200D84888 /* AppDelegate.swift in Sources */,
+				F1D62C2F1F17ECDA00D84888 /* CameraViewController.swift in Sources */,
+				F1F10BAD1F19DBDD0040972B /* NBUI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1D62C201F17DDA200D84888 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1D62C211F17DDA200D84888 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1D62C251F17DDA200D84888 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1D62C261F17DDA200D84888 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1D62C291F17DDA200D84888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1D62C2A1F17DDA200D84888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1D62C2C1F17DDA200D84888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25E274E6E964FB27AC5C8CB6 /* Pods-vue.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2L4CBUJMDB;
+				INFOPLIST_FILE = vue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vue.vue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F1D62C2D1F17DDA200D84888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94DF904CAB4DA958E6B78B90 /* Pods-vue.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2L4CBUJMDB;
+				INFOPLIST_FILE = vue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vue.vue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1D62C141F17DDA100D84888 /* Build configuration list for PBXProject "vue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1D62C291F17DDA200D84888 /* Debug */,
+				F1D62C2A1F17DDA200D84888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1D62C2B1F17DDA200D84888 /* Build configuration list for PBXNativeTarget "vue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1D62C2C1F17DDA200D84888 /* Debug */,
+				F1D62C2D1F17DDA200D84888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1D62C111F17DDA100D84888 /* Project object */;
+}
