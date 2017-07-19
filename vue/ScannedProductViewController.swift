@@ -80,8 +80,7 @@ class ScannedProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        _ = self.view.addBlurEffect(.dark)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissProduct))
         self.view.addGestureRecognizer(tapGesture)

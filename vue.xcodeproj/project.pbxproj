@@ -60,6 +60,7 @@
 		F1F10BC21F1AC35C0040972B /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		F1F10BC31F1AC35C0040972B /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		F1F10BC61F1BDC6D0040972B /* BasketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		F1F10BCC1F1C06C90040972B /* Vue-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vue-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +140,7 @@
 		F1F10BB91F1AC07C0040972B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F1F10BCC1F1C06C90040972B /* Vue-Bridging-Header.h */,
 				F1F10BA61F19D69D0040972B /* UI+Vue.swift */,
 				F1D62C231F17DDA200D84888 /* Assets.xcassets */,
 				F1F10BAC1F19DBDD0040972B /* NBUI.swift */,
@@ -200,6 +202,7 @@
 				F1D62C171F17DDA200D84888 /* Resources */,
 				20FC1059790C87F26A740B5C /* [CP] Embed Pods Frameworks */,
 				0CFF020D5E0EC53A8C2DB1B9 /* [CP] Copy Pods Resources */,
+				F164CA8D1F1D243900D0BFE9 /* Build number */,
 			);
 			buildRules = (
 			);
@@ -222,7 +225,7 @@
 				TargetAttributes = {
 					F1D62C181F17DDA200D84888 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2L4CBUJMDB;
+						DevelopmentTeam = 3CG7T582C9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -309,6 +312,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		F164CA8D1F1D243900D0BFE9 /* Build number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "git=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD --count`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\necho \"Incremented the build number ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -456,12 +473,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2L4CBUJMDB;
+				DEVELOPMENT_TEAM = 3CG7T582C9;
 				INFOPLIST_FILE = vue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vue.vue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vue.vue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Vue/Vue-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -473,12 +492,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2L4CBUJMDB;
+				DEVELOPMENT_TEAM = 3CG7T582C9;
 				INFOPLIST_FILE = vue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vue.vue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vue.vue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Vue/Vue-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
