@@ -28,8 +28,10 @@ class BasketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
   
-        self.navigationItem.title = NSLocalizedString("Basket", comment: "").uppercased()
+        self.navigationItem.title = NSLocalizedString("My Vue", comment: "").uppercased()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismissBasket))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
+
         self.view.backgroundColor = UIColor.vueLightGrey
     }
     
@@ -79,7 +81,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
         let product = ProductManager.current.basket[indexPath.row]
         
         let vc = ProductViewController.viewController
-        vc.product = product
+        vc.selectedProduct = product
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

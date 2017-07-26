@@ -31,13 +31,37 @@ extension UIColor {
     }
 }
 
+enum ButtonStyle {
+    case large
+    case liked
+    case subtle
+    case unliked
+}
+
 extension UIButton {
     
-    func style() {
-        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        self.setTitleColor(UIColor.white, for: .normal)
-        self.backgroundColor = UIColor.vueDarkGreen
-        self.addCircularBorder(withColor: UIColor.vueLightGrey, withWidth: 2.0)
+    func style(withButtonStyle style: ButtonStyle = .large) {
+        switch (style) {
+        case .liked:
+            self.setTitle(nil, for: .normal)
+            self.setImage(#imageLiteral(resourceName: "heart-filled").withRenderingMode(.alwaysTemplate), for: .normal)
+            self.tintColor = UIColor.vueGreen
+            self.imageView?.contentMode = .scaleAspectFit
+        case .unliked:
+            self.setTitle(nil, for: .normal)
+            self.setImage(#imageLiteral(resourceName: "heart-outline").withRenderingMode(.alwaysTemplate), for: .normal)
+            self.tintColor = UIColor.vueLightGrey
+            self.imageView?.contentMode = .scaleAspectFit
+        case .subtle:
+            self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 10)
+            self.setTitleColor(UIColor.white, for: .normal)
+            self.backgroundColor = UIColor.clear
+        default:
+            self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+            self.setTitleColor(UIColor.white, for: .normal)
+            self.backgroundColor = UIColor.vueDarkGreen
+            self.addCircularBorder(withColor: UIColor.vueLightGrey, withWidth: 2.0)
+        }
     }
 }
 
@@ -56,5 +80,32 @@ extension UITableView {
         self.backgroundColor = UIColor.vueLightGrey
         self.keyboardDismissMode = .onDrag
         self.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+    }
+}
+
+extension UIViewController {
+    func addLogoToNavTileView(withFadeInEffect shouldFadeIn: Bool = false) {
+        let imageView = UIImageView()
+        imageView.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin]
+        imageView.contentMode = .scaleAspectFit
+        
+        if shouldFadeIn == true {
+            imageView.alpha = 0
+        }
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 175, height: 40))
+        imageView.frame = view.frame
+
+        imageView.image = #imageLiteral(resourceName: "logo")
+    
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.navigationItem.titleView = view
+
+        self.navigationItem.title = " "
+        
+        if shouldFadeIn == true {
+            imageView.fadeIn()
+        }
     }
 }

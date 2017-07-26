@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3FE2F66AA8C52EE0552D40337C8ABA33D3525355",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3FE2F66AA8C52EE0552D40337C8ABA33D3525355" : 9223372036854775807,
+    "1B275492A4EC14B98923F1FFB9342DA8FE746A27" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "083B5A85-8834-4832-8EE0-357769E99113",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3FE2F66AA8C52EE0552D40337C8ABA33D3525355" : "vue\/",
+    "1B275492A4EC14B98923F1FFB9342DA8FE746A27" : "%3CHelpers%3E\/NBSuite\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "vue",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "vue.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/natelegreat1\/nb-suite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1B275492A4EC14B98923F1FFB9342DA8FE746A27"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Natelegreat1\/vue.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3FE2F66AA8C52EE0552D40337C8ABA33D3525355"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ use_frameworks!
 
 def shared_pods
     pod 'TensorFlow-experimental'
+    pod 'SVProgressHUD'
 end
 
 target 'vue' do

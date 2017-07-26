@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     fileprivate func styleApp() {
+        HUD.style()
         
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor.darkGray

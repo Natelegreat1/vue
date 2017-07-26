@@ -35,9 +35,10 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = NSLocalizedString("Search", comment: "").uppercased()
+        self.addLogoToNavTileView()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.dismissSearch))
         
+        self.searchBar.becomeFirstResponder()
         self.view.backgroundColor = UIColor.vueLightGrey
     }
 
@@ -73,7 +74,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let product = ProductManager.current.products[indexPath.row]
 
         let vc = ProductViewController.viewController
-        vc.product = product
+        vc.selectedProduct = product
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

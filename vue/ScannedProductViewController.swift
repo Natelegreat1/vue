@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ScannedProductDelegate: class {
+    func didRequestMoreInformation(forProduct product: Product)
+}
+
 class ScannedProductViewController: UIViewController {
 
     class var viewController: ScannedProductViewController {
@@ -17,9 +21,18 @@ class ScannedProductViewController: UIViewController {
         return vc as! ScannedProductViewController
     }
     
+    weak var delegate: ScannedProductDelegate?
+    
     @IBOutlet weak var mainView: UIView! {
         didSet {
-            mainView.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.addToBasket))
+            tapGesture.numberOfTapsRequired = 2
+            
+            let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.viewProduct))
+            swipeGesture.direction = .up
+            mainView.addGestureRecognizer(swipeGesture)
+            mainView.addGestureRecognizer(tapGesture)
+            mainView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         }
     }
     
@@ -51,18 +64,27 @@ class ScannedProductViewController: UIViewController {
             reviewsCountLabel.textColor = UIColor.white
         }
     }
+    @IBOutlet weak var detailsInstructionLabel: UILabel! {
+        didSet {
+            detailsInstructionLabel.text = NSLocalizedString("Swipe for more information", comment: "")
+            detailsInstructionLabel.textAlignment = .center
+            detailsInstructionLabel.textColor = UIColor.white
+            detailsInstructionLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFontWeightThin)
+        }
+    }
     @IBOutlet weak var viewButton: UIButton! {
         didSet {
-            viewButton.setTitle(NSLocalizedString("Reviews", comment: "").uppercased(), for: .normal)
+            viewButton.setTitle(nil, for: .normal)
             viewButton.addTarget(self, action: #selector(self.viewProduct), for: .touchUpInside)
-            viewButton.style()
+            viewButton.setImage(#imageLiteral(resourceName: "down").withRenderingMode(.alwaysTemplate), for: .normal)
+            viewButton.imageView?.contentMode = .center
+            viewButton.tintColor = UIColor.white
         }
     }
     @IBOutlet weak var addButton: UIButton! {
         didSet {
-            addButton.setTitle(NSLocalizedString("Add to basket", comment: "").uppercased(), for: .normal)
+            addButton.style(withButtonStyle: .unliked)
             addButton.addTarget(self, action: #selector(self.addToBasket), for: .touchUpInside)
-            addButton.style()
         }
     }
 
@@ -80,31 +102,29 @@ class ScannedProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
-
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissProduct))
-        self.view.addGestureRecognizer(tapGesture)
+        self.view.backgroundColor = UIColor.clear
         
         self.configureCTAButton()
     }
     
     func configureCTAButton() {
         if ProductManager.current.basket.contains(self.product) {
-            self.addButton.setTitle(NSLocalizedString("Remove from basket", comment: "").uppercased(), for: .normal)
+            addButton.style(withButtonStyle: .liked)
         } else {
-            self.addButton.setTitle(NSLocalizedString("Add to basket", comment: "").uppercased(), for: .normal)
+            addButton.style(withButtonStyle: .unliked)
         }
     }
     
     func addToBasket() {
         if ProductManager.current.basket.contains(self.product) {
             ProductManager.current.remove(productFromBasket: self.product)
+            HUD.showError(withText: nil)
         } else {
             ProductManager.current.add(productToBasket: self.product)
+            HUD.showSuccess(withText: nil)
         }
         
         self.configureCTAButton()
-        self.dismissProduct()
     }
 
     override func viewWillLayoutSubviews() {
@@ -113,10 +133,9 @@ class ScannedProductViewController: UIViewController {
     }
     
     func viewProduct() {
-        let vc = ProductViewController.viewController
-        vc.product = self.product
-        let nav = UINavigationController(rootViewController: vc)
-        self.present(nav, animated: true, completion: nil)
+        self.dismiss(animated: true) { 
+            self.delegate?.didRequestMoreInformation(forProduct: self.product)
+        }
     }
 
     func dismissProduct() {

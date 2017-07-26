@@ -18,11 +18,13 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var productImageView: UIImageView! {
         didSet {
             productImageView.contentMode = .scaleAspectFit
+            productImageView.addBorder(withCornerRadius: 3.0, withColor: UIColor.vueDarkGrey, withWidth: 2.0)
+
         }
     }
     @IBOutlet weak var productLabel: UILabel! {
         didSet {
-            productLabel.numberOfLines = 2
+            productLabel.numberOfLines = 0
         }
     }
     
@@ -40,8 +42,7 @@ class ProductViewController: UIViewController {
     }
     @IBOutlet weak var addButton: UIButton! {
         didSet {
-            addButton.setTitle(NSLocalizedString("Add to basket", comment: "").uppercased(), for: .normal)
-            addButton.style()
+            addButton.style(withButtonStyle: .unliked)
             addButton.addTarget(self, action: #selector(self.addToBasket), for: .touchUpInside)
         }
     }
@@ -53,16 +54,25 @@ class ProductViewController: UIViewController {
         }
     }
     
-    var product: Product!
+    var selectedProduct: Product?
+    fileprivate var product: Product {
+        guard let product = self.selectedProduct else {
+            NSLog("Missing product!")
+            return Product()
+        }
+        return product
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = NSLocalizedString("Product", comment: "").uppercased()
+        self.addLogoToNavTileView()
         
         if self.navigationController?.viewControllers.first == self {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.dismissProduct))
         }
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: nil, action: nil)
+        
         self.configureForProduct()
     }
     
@@ -86,9 +96,9 @@ class ProductViewController: UIViewController {
     
     func configureCTAButton() {
         if ProductManager.current.basket.contains(self.product) {
-            self.addButton.setTitle(NSLocalizedString("Remove from basket", comment: "").uppercased(), for: .normal)
+            addButton.style(withButtonStyle: .liked)
         } else {
-            self.addButton.setTitle(NSLocalizedString("Add to basket", comment: "").uppercased(), for: .normal)
+            addButton.style(withButtonStyle: .unliked)
         }
     }
     
@@ -112,6 +122,9 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
         return tableView.frame.height * 0.2
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return NSLocalizedString("Reviews", comment: "").uppercased()
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }

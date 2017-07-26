@@ -8,6 +8,10 @@
 
 import UIKit
 
+extension Notification.Name {
+    static let basketUpdated = Notification.Name("didUpdateBasket")
+}
+
 class ProductManager: NSObject {
     private static var privateShared : ProductManager?
     
@@ -19,7 +23,7 @@ class ProductManager: NSObject {
         return uwShared
     }
     
-    var products: [Product]!
+    private (set) var products = [Product]()
     private (set) var basket = [Product]()
 
     fileprivate class func destroy() {
@@ -53,10 +57,12 @@ class ProductManager: NSObject {
     
     func add(productToBasket product: Product) {
         self.basket.append(product)
+        NotificationCenter.default.post(name: Notification.Name.basketUpdated, object: product)
     }
     
     func remove(productFromBasket product: Product) {
         self.basket.removeObject(product)
+        NotificationCenter.default.post(name: Notification.Name.basketUpdated, object: product)
     }
     
     func clearBasket() {

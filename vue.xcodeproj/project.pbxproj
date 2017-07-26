@@ -16,6 +16,9 @@
 		F1D62C311F180A3800D84888 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D62C301F180A3800D84888 /* Search.storyboard */; };
 		F1D62C331F180A4D00D84888 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D62C321F180A4D00D84888 /* SearchViewController.swift */; };
 		F1D62C351F180B6A00D84888 /* Compare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D62C341F180B6A00D84888 /* Compare.storyboard */; };
+		F1E4582D1F2814A80046A33B /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E4582B1F2814A80046A33B /* ProductCollectionViewCell.swift */; };
+		F1E4582E1F2814A80046A33B /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E4582C1F2814A80046A33B /* ProductCollectionViewCell.xib */; };
+		F1E458301F2827720046A33B /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E4582F1F2827720046A33B /* HUD.swift */; };
 		F1F10BA71F19D69D0040972B /* UI+Vue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BA61F19D69D0040972B /* UI+Vue.swift */; };
 		F1F10BA91F19D7FF0040972B /* ScannedProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F10BA81F19D7FF0040972B /* ScannedProduct.storyboard */; };
 		F1F10BAB1F19D8620040972B /* ScannedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F10BAA1F19D8620040972B /* ScannedProductViewController.swift */; };
@@ -46,6 +49,9 @@
 		F1D62C301F180A3800D84888 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		F1D62C321F180A4D00D84888 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F1D62C341F180B6A00D84888 /* Compare.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compare.storyboard; sourceTree = "<group>"; };
+		F1E4582B1F2814A80046A33B /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1E4582C1F2814A80046A33B /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		F1E4582F1F2827720046A33B /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		F1F10BA61F19D69D0040972B /* UI+Vue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Vue.swift"; sourceTree = "<group>"; };
 		F1F10BA81F19D7FF0040972B /* ScannedProduct.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScannedProduct.storyboard; sourceTree = "<group>"; };
 		F1F10BAA1F19D8620040972B /* ScannedProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedProductViewController.swift; sourceTree = "<group>"; };
@@ -113,12 +119,13 @@
 		F1D62C1B1F17DDA200D84888 /* vue */ = {
 			isa = PBXGroup;
 			children = (
+				F1E4582F1F2827720046A33B /* HUD.swift */,
 				F1D62C1C1F17DDA200D84888 /* AppDelegate.swift */,
 				F1F10BBC1F1AC0970040972B /* Managers */,
 				F1F10BBB1F1AC0910040972B /* Models */,
+				F1F10BBA1F1AC0890040972B /* ViewControllers */,
 				F1F10BB81F1AC0750040972B /* Views */,
 				F1F10BB91F1AC07C0040972B /* Resources */,
-				F1F10BBA1F1AC0890040972B /* ViewControllers */,
 			);
 			path = vue;
 			sourceTree = "<group>";
@@ -181,6 +188,8 @@
 		F1F10BBD1F1AC0A30040972B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F1E4582B1F2814A80046A33B /* ProductCollectionViewCell.swift */,
+				F1E4582C1F2814A80046A33B /* ProductCollectionViewCell.xib */,
 				F1F10BC21F1AC35C0040972B /* ReviewTableViewCell.swift */,
 				F1F10BC31F1AC35C0040972B /* ReviewTableViewCell.xib */,
 				F1F10BAE1F19E36E0040972B /* ProductTableViewCell.swift */,
@@ -255,6 +264,7 @@
 			files = (
 				F1F10BC51F1AC35C0040972B /* ReviewTableViewCell.xib in Resources */,
 				F1D62C271F17DDA200D84888 /* LaunchScreen.storyboard in Resources */,
+				F1E4582E1F2814A80046A33B /* ProductCollectionViewCell.xib in Resources */,
 				F1F10BA91F19D7FF0040972B /* ScannedProduct.storyboard in Resources */,
 				F1F10BC11F1AC0F40040972B /* Product.storyboard in Resources */,
 				F1D62C241F17DDA200D84888 /* Assets.xcassets in Resources */,
@@ -336,9 +346,11 @@
 			files = (
 				F1F10BA71F19D69D0040972B /* UI+Vue.swift in Sources */,
 				F1F10BC41F1AC35C0040972B /* ReviewTableViewCell.swift in Sources */,
+				F1E4582D1F2814A80046A33B /* ProductCollectionViewCell.swift in Sources */,
 				F1F10BC71F1BDC6D0040972B /* BasketViewController.swift in Sources */,
 				F1F10BB71F1AB43C0040972B /* ProductManager.swift in Sources */,
 				F1F10BB31F1AB0CD0040972B /* Product.swift in Sources */,
+				F1E458301F2827720046A33B /* HUD.swift in Sources */,
 				F1F10BBF1F1AC0DC0040972B /* ProductViewController.swift in Sources */,
 				F1D62C331F180A4D00D84888 /* SearchViewController.swift in Sources */,
 				F1F10BB51F1AB1160040972B /* ProductReview.swift in Sources */,
